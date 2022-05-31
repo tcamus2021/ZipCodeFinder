@@ -36,3 +36,173 @@
     transform: rotate(360deg);
   }
 }
+
+.container-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.gray-background {
+  background: #282c34;
+}
+
+.transparent-background {
+  background: transparent;
+}
+
+.text-color {
+  color: azure;
+}
+
+.margin-cost {
+  margin-right: 4em;
+  margin-left: 4em;
+}
+
+.search-bar {
+  width: 30em;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.input-correct {
+  border-color: lime;
+}
+
+.input-incorrect {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+}
+
+.button-search {
+  height: 2em;
+  border-radius: 10px;
+}
+
+.button-search:hover {
+  background-color: #989c98;
+  cursor: grab;
+}
+
+.search-aera {
+  background-color: #686c68;
+  border: solid;
+  border-color: #080c04;
+  border-radius: 10px;
+  box-shadow:  -26px -26px 51px #080c04;
+}
+
+.result-aera {
+  background-color: #F0F0F0;
+  width: 63%;
+  margin-top: 10px;
+  border: solid;
+  border-color: #080c04;
+  border-radius: 10px;
+  box-shadow:  -26px -26px 51px #080c04;
+  animation: open-result-animation 4s linear 0s 1 normal forwards;
+  overflow: hidden;
+}
+
+@keyframes open-result-animation {
+  0% {height: 0%;}
+  100% {height: 75%;}
+}
+
+.end-loading {
+  position: relative;
+  animation-name: end-loading-animation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes end-loading-animation {
+  0% {top: 0%;}
+  100% {top: -45%;}
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.bar {
+  width: 10px;
+  height: 70px;
+  background: transparent;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: white;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+
