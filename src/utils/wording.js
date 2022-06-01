@@ -1,0 +1,12 @@
+export const EMPTY_LABEL = "";
+export const GO_LABEL = "GO";
+export const ZIP_CODE_LABEL = "ZIP CODE";
+export const ZIP_CODE_WITH_NUMBER_LABEL = "Zip code n°";
+export const ERROR_GENERAL_LABEL = "An error occured";
+export const ERROR_INPUT_LABEL = "Please enter a value with 5 numbers";
+export const ERROR_NO_ZIP_CODE_LABEL = "Zip code not found";
+export const STATE_LABEL = "State :";
+export const LONGITUDE_LABEL = "Longitude :";
+export const LATITUDE_LABEL = "Latitude :";
+export const ALT_OPEN_LABEL = "Click here to open";
+export const ALT_CLOSE_LABEL = "Click here to close";

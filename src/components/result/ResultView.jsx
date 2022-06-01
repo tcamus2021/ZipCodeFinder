@@ -1,11 +1,8 @@
 import React, { Component } from "react";
+import { ZIP_CODE_WITH_NUMBER_LABEL } from "../../utils/wording";
 import DetailsPlace from "./DetailsPlace";
 
 export default class ResultView extends Component {
-    constructor(props){
-        super();
-    }
-
     render(){
         let listOfPlaces = [];
         this.props.data.places.forEach(place => {
@@ -13,7 +10,7 @@ export default class ResultView extends Component {
         })
         return(
             <div className="result-aera">
-                <h1>Zip code n°{this.props.data["post code"]}</h1>
+                <h1>{ZIP_CODE_WITH_NUMBER_LABEL + this.props.data["post code"]}</h1>
                 <div className="list-places">
                     {listOfPlaces}
                 </div>
