@@ -50,6 +50,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
+  z-index: 0;
 }
 
 .gray-background {
@@ -83,10 +84,6 @@
   border-color: red;
 }
 
-.error-message {
-  color: red;
-}
-
 .button-search {
   height: 2em;
   border-radius: 10px;
@@ -106,6 +103,10 @@
 }
 
 .result-aera {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   background-color: #F0F0F0;
   width: 63%;
   margin-top: 10px;
@@ -114,7 +115,9 @@
   border-radius: 10px;
   box-shadow:  -26px -26px 51px #080c04;
   animation: open-result-animation 4s linear 0s 1 normal forwards;
-  overflow: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
 @keyframes open-result-animation {
@@ -204,5 +207,84 @@ input[type=number] {
     transform: scaleY(0.1);
     background: transparent;
   }
+  
 }
 
+.list-places{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+
+.details-place{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  background-color: #989c98;
+  border: solid;
+  border-color: #686c68;
+  border-top-left-radius: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-top-right-radius: 10px;
+}
+
+.icon-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.closed-details {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.details-place-open{
+  width: 80%;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: solid;
+  border-left: solid;
+  border-bottom: solid;
+  border-color: #686c68;
+  background-color: #989c98;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-place-open-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #F0F0F0; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #686c68; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #686c68; 
+}

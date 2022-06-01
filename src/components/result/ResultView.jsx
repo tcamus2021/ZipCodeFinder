@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DetailsPlace from "./DetailsPlace";
 
 export default class ResultView extends Component {
     constructor(props){
@@ -6,13 +7,16 @@ export default class ResultView extends Component {
     }
 
     render(){
+        let listOfPlaces = [];
+        this.props.data.places.forEach(place => {
+            listOfPlaces.push(<DetailsPlace key={place.latitude+'|'+place.longitude} place={place} />);
+        })
         return(
             <div className="result-aera">
-                <h1>{this.props.data.places[0]["place name"]}</h1>
-                <p>Longitude: {this.props.data.places[0]["longitude"]}</p>
-                <p>Latitude: {this.props.data.places[0]["latitude"]}</p>
-                <p>State: {this.props.data.places[0]["state"]}</p>
-                <p>Country: {this.props.data.country}</p>
+                <h1>Zip code n°{this.props.data["post code"]}</h1>
+                <div className="list-places">
+                    {listOfPlaces}
+                </div>
             </div>
         );
     }

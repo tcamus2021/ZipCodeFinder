@@ -8,7 +8,7 @@ const SearchView = ({ launchSearch, isLoading, error, dataDisplayed }) => {
         <div className={classNameForSearch}>
             <p className="text-color margin-cost">ZIP CODE</p>
             <input type="number" min="10000" max="99999" className={classNameForInput} onChange={(e) => setInputValue(e.target.value)}/>
-            <button type="button" className="margin-cost button-search" onClick={() => launchSearch(inputValue)} disabled={isLoading}>GO</button>
+            <button type="button" className="margin-cost button-search" id="search-button" onClick={() => launchSearch(inputValue)} disabled={isLoading}>GO</button>
         </div>
     </div>)
 };
